@@ -14,9 +14,9 @@ const Products = () => {
         <h1>Products</h1>
             <section className="products">
                 {products.map((product) => (
-                    <Col span={8} key={product._id}>
-                        <Card title={product.name} bordered={false}>
-                            <p>price: {product.price.tofixed(2)}€</p>
+                    <Col span={16} key={product.id}>
+                        <Card title={product.productName} bordered={false}>
+                            <p>price: {product.price}€</p>
                             <button onClick={() => addCart(product)}>addCart</button>
                         </Card>
                     </Col>

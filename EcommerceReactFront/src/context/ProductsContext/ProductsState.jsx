@@ -9,7 +9,7 @@ const initialState = {
     cart: cartStorage || []
 }
 
-const API_URL = 'http://localhost:5173/'
+const API_URL = 'http://localhost:3000'
 
 export const ProductsProvider = ({ children }) => {
     const [state, dispatch] = useReducer(ProductsReducer, initialState);

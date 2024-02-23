@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5173/'
+const API_URL = 'http://localhost:3000'
 
 export const OrdersProvider = ({ children }) => {
     const createOrder = async (order) => {

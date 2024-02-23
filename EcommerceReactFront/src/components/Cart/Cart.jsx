@@ -18,9 +18,10 @@ const Cart = () => {
     }
 
     const cartItem = cart.map((cartItem) => (
-        <Col span={8} key={cartItem._id}>
-            <Card title={cartItem.name} className= 'cart'>
-                <span>{cartItem.price.toFixed(2)} €</span>
+        <Col span={16} key={cartItem.id}>
+            <Card title={cartItem.ProductName} className= 'cart'>
+                
+                <span>{cartItem.price} €</span>
             </Card>
         </Col>
     ))

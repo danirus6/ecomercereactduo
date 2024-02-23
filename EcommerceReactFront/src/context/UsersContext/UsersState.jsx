@@ -16,7 +16,7 @@ export const UsersProvider = ({ children }) => {
     const [state, dispatch] = useReducer (UserReducer, initialState)
 
     const login = async (user) => {
-        const res = await axios.post(API_URL + '/users/login', user) //Habría que mirar el users/login
+        const res = await axios.post(API_URL + 'users/login', user) //Habría que mirar el users/login
         
         dispatch({
             type: 'LOGIN',
@@ -32,7 +32,7 @@ export const UsersProvider = ({ children }) => {
     const getUserInfo = async () => {
         const token = JSON.parse(localStorage.getItem('token'))
 
-        const res = await axios.get(API_URL + '/users/info', { //Habría que mirar el users/info
+        const res = await axios.get(API_URL + 'users/user-info', { //Habría que mirar el users/info
             headers: { authorization: token }
         })
 
@@ -46,7 +46,7 @@ export const UsersProvider = ({ children }) => {
     const logout = async () => {
         const token = JSON.parse(localStorage.getItem('token'))
 
-        const res = await axios.delete(API_URL + '/users/logout', { 
+        const res = await axios.delete(API_URL + 'users/logout', { 
             headers: { authorization: token }
         })
         dispatch({
