@@ -32,7 +32,7 @@ export const UsersProvider = ({ children }) => {
     const getUserInfo = async () => {
         const token = JSON.parse(localStorage.getItem('token'))
 
-        const res = await axios.get(API_URL + 'users/user-info', { //Habría que mirar el users/info
+        const res = await axios.get(API_URL + 'users/user-info', {
             headers: { authorization: token }
         })
 

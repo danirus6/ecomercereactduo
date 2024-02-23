@@ -5,6 +5,7 @@ import { Spin } from 'antd'
 
 const UserProfile = () => {
     const { getUserInfo, user } = useContext(UsersContext)
+    console.log(user)
     useEffect(() => {
         getUserInfo()
     }, [])

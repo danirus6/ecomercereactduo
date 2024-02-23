@@ -6,10 +6,11 @@ const API_URL = 'http://localhost:3000'
 export const OrdersProvider = ({ children }) => {
     const createOrder = async (order) => {
         const token = JSON.parse(localStorage.getItem('token'))
+        console.log(order)
         try {
             await axios.post (
                 API_URL + '/orders/create',
-                { productIds: order
+                { totalAmount : order.price
                 }, 
                 {headers: { authorization: token}}
                 )

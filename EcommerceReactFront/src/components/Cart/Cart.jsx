@@ -12,7 +12,7 @@ const Cart = () => {
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])
 
-const productsIdsToOrder = cart.map((cardItem) => cardItem.id)
+const productsIdsToOrder = cart.map((cardItem) => cardItem)
     const createNewOrder = () => {
         createOrder(productsIdsToOrder)
         clearCart()

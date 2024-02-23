@@ -7,7 +7,7 @@ const users = (state, action) => {
             token: action.payload.token
         }
 
-        case 'GET_USERS_INFO':
+        case 'GET_USER_INFO':
             return {
                 ...state,
                 token: action.payload
