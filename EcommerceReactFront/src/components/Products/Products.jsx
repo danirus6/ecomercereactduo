@@ -28,14 +28,3 @@ const Products = () => {
 };
 
 export default Products;
-
-// const product = products.map((product) => {
-// //     return (
-// //         <div key={product._id}>
-// //         <span>{product.name} </span>
-// //         <span>{product.price.toFixed(2)}€</span>
-// //         <button onClick={() => addCart(product)}>Add Cart</button>
-// //         </div>
-// // );
-// });
-// return <div>{product}</div>;

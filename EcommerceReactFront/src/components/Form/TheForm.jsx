@@ -20,7 +20,7 @@ const TheForm = () => {
                 text: 'Rellena todos los campos correctamente!',
                 confirmButtonText: 'Aceptar'
             });
-            return; // Detener el envío si las validaciones fallan
+            return; 
         }
 
         // Extraer solo los datos necesarios del formulario

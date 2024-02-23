@@ -12,20 +12,19 @@ const Cart = () => {
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])
 
+const productsIdsToOrder = cart.map((cardItem) => cardItem.id)
     const createNewOrder = () => {
-        createOrder(cart)
+        createOrder(productsIdsToOrder)
         clearCart()
     }
 
     const cartItem = cart.map((cartItem) => (
         <Col span={16} key={cartItem.id}>
             <Card title={cartItem.ProductName} className= 'cart'>
-                
                 <span>{cartItem.price} €</span>
             </Card>
         </Col>
     ))
-    
     return(
         <>
             <h1>Cart</h1>
