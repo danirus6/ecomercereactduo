@@ -9,22 +9,24 @@ const Cart = () => {
     const { createOrder } = useContext(OrdersContext)
 
     useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify(cart))
+        localStorage.setItem("cart", JSON.stringify(cart))
     }, [cart])
 
-const productsIdsToOrder = cart.map((cardItem) => cardItem)
+    const productsIdsToOrder = cart.map((cardItem) => cardItem.id) // un cambio aquí. Nosotros teníamos cardItem después de la función flecha y Eder tiene cardItem.id
+    
     const createNewOrder = () => {
         createOrder(productsIdsToOrder)
         clearCart()
     }
 
-    const cartItem = cart.map((cartItem) => (
+    const cartItem = cart.map((cartItem) => { //Otro cambio. Yo puse paréntesis en esta función flecha y Eder, una llave.
         <Col span={16} key={cartItem.id}>
             <Card title={cartItem.ProductName} className= 'cart'>
                 <span>{cartItem.price} €</span>
             </Card>
         </Col>
-    ))
+    })
+
     return(
         <>
             <h1>Cart</h1>
