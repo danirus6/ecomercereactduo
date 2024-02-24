@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const { jwt_secret } = require('../config/config.json')['development']
 const {Op} = Sequelize;
 const UserController = {
-  // Endpoint que nos traiga la información del usuario conectado junto a los pedidos que tiene y los productos que contiene cada pedido.
+  // Endpoint que nos traiga la información del usuario conectado junto a los pedidos que tiene y los productos que contiene cada pedido
 
  async getUserInfo(req, res) {
     try {
