@@ -1,0 +1,6 @@
+
+sequelize model:generate --name User --attributes name:string,email:string,password:string,role:string
+
+sequelize model:generate --name Orders --attributes name:string,UserId:integer
+
+sequelize db:migrate

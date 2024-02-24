@@ -1,0 +1,16 @@
+.login {
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    padding: .625rem 0 .625rem 0;
+    background-color: #3e57e6;
+  
+    &__form {
+      display: flex;
+      justify-content: space-around;
+      font-size: smaller;
+      width: 85%;
+    }
+  }
