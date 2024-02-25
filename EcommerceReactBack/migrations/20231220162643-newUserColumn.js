@@ -3,9 +3,8 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.changeColumn("Users", "email", {
-      type: Sequelize.STRING,
-      unique: true,
+    return queryInterface.addColumn("Users", "confirmed", {
+      type: Sequelize.BOOLEAN,
     });
   },
 
