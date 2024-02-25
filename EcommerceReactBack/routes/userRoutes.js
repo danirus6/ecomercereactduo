@@ -1,14 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const UserController = require('../controllers/userController');
-const {authentication} = require('../middlewares/authentication')
+const UserController = require("../controllers/UserController.js");
+const { authentication } = require("../middlewares/authentication.js");
 
-
-router.get('/getAllUsers', authentication, UserController.findAll);
-router.post('/register', UserController.create);
-router.post('/login',UserController.login)
-router.delete('/delete/:id', authentication, UserController.deleteUser);
-router.delete('/logout', authentication, UserController.logout);
-router.get('/user-info', authentication, UserController.getUserInfo);
+router.post("/", UserController.create);
+router.get("/", UserController.getAll);
+router.post("/login", UserController.login);
+router.get("/getUserOrders", authentication, UserController.getUserInfo);
+router.delete("/logout", authentication, UserController.logout);
+router.get("/confirm/:emailToken", UserController.confirm);
 
 module.exports = router;

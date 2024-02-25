@@ -1,9 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const OrderController = require('../controllers/orderController');
-const ProductController = require('../controllers/productController');
+const OrderController = require("../controllers/OrderController");
+const { authentication } = require("../middlewares/authentication.js");
 
-router.post('/create', OrderController.create);
+//Crea un endpoint para crear pedidos
+router.post("/", authentication, OrderController.create);
 
-router.get('/getAll', OrderController.getAll);
+//Crea un endpoint para ver los pedidos junto a los productos que tienen
+
+router.get("/", OrderController.getAll);
+
 module.exports = router;
