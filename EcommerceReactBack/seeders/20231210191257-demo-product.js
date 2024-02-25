@@ -1,57 +1,46 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-
-    await queryInterface.bulkInsert('Products', [
+    return queryInterface.bulkInsert("Products", [
       {
-        productName: 'Steam',
-        price: 200,
-        categoryID: 1,
+        name: "Letxuga",
+        price: 1.99,
+        CategoryId: 1,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
-        productName: 'Playstation',
-        price: 300,
-        categoryID: 2,
+        name: "Manzanas",
+        price: 2.99,
+        CategoryId: 2,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
-        productName: 'Nintendo',
-        price: 100,
-        categoryID: 2,
+        name: "Fresas",
+        price: 4.99,
+        CategoryId: 2,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
-        productName: 'Microsoft',
-        price: 350,
-        categoryID: 2,
+        name: "Calabazas",
+        price: 2.33,
+        CategoryId: 1,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
-        productName: 'Percha',
-        price: 3,
-        categoryID: 1,
+        name: "Peras",
+        price: 2.99,
+        CategoryId: 2,
         createdAt: new Date(),
-        updatedAt: new Date()
-      }
-    ], {});
+        updatedAt: new Date(),
+      },
+    ]);
   },
 
-  async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Products', null, {});
-
-
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-  }
+  async down(queryInterface, Sequelize) {},
 };
