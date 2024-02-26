@@ -1,0 +1,16 @@
+.header {
+    position:fixed;
+    left: 0;
+    top: 0;
+    padding: .625rem 0 .625rem 0;
+    background-color: #3cabf5;
+    width: 100%;
+
+    &__link {
+      color: white;
+      margin-right: 0.9375rem;
+      padding: 1rem; 
+    }
+  }
+
+  /* Fusilado del proyecto anterior; se cambiará más tarde */

@@ -1,0 +1,33 @@
+.form {
+    margin-top: .625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    &__data {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-bottom: .625rem;
+  
+      &__box {
+        border-radius: .3125rem;
+        background-color: #1E3748;
+        color: white;
+        border-color: darkslateblue;
+        border-style: solid;
+        margin-top: .625rem;
+      }
+  
+      ::placeholder {
+        color: white;
+        font-style: italic;
+      }
+  
+      :focus::placeholder{
+        color: #7B96CC;
+      }
+    }
+  }
+
+  /* Fusilado del proyecto anterior; se cambiará más tarde */
